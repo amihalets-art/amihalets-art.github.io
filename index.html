@@ -3,11 +3,109 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Andrii Mikhalets | Profile</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+            background-color: #fafafa;
+        }
+        header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        .profile-photo {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 1rem;
+            border: 3px solid #e1e4e8;
+        }
+        h1 {
+            margin: 0;
+            font-size: 2.5rem;
+            color: #24292e;
+        }
+        .username {
+            font-size: 1.2rem;
+            color: #586069;
+            margin-top: 0.2rem;
+            margin-bottom: 1rem;
+        }
+        .role {
+            font-size: 1.2rem;
+            font-weight: 500;
+        }
+        .links a {
+            color: #0366d6;
+            text-decoration: none;
+            margin: 0 10px;
+            font-weight: 600;
+        }
+        .links a:hover {
+            text-decoration: underline;
+        }
+        section {
+            background: #fff;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            margin-bottom: 2rem;
+        }
+        h2 {
+            border-bottom: 1px solid #eaecef;
+            padding-bottom: 0.5rem;
+            margin-top: 0;
+            color: #24292e;
+        }
+        ul {
+            padding-left: 20px;
+        }
+        li {
+            margin-bottom: 0.5rem;
+        }
+    </style>
 </head>
-body>
- <h1>Привіт! Це мій новий сайт</h1>
- <p>Я створив цей каркас автоматично у VS Code за допомогою Emmet.</p>
- <p>Сайт опубліковано через Git!</p>
+<body>
+
+    <header>
+        <!-- Для відображення фото поклади файл photo.jpg у ту ж папку, що і index.html -->
+        <img src="photo.jpg" alt="Andrii Mikhalets" class="profile-photo">
+        <h1>Andrii Mikhalets</h1>
+        <p class="username">@Amikhalets</p>
+        <p class="role">Front-End Developer Student at SoftServe Academy</p>
+        <div class="links">
+            <a href="https://github.com/Amikhalets" target="_blank">GitHub</a>
+            <a href="#" target="_blank">LinkedIn</a>
+        </div>
+    </header>
+
+    <main>
+        <section>
+            <h2>About Me</h2>
+            <ul>
+                <li><strong>Role:</strong> Front-End Developer Student at SoftServe Academy.</li>
+                <li><strong>Background:</strong> Досвід роботи Senior Software Engineer та SharePoint Administrator у банківському секторі.</li>
+                <li><strong>Expertise:</strong> React, JavaScript/TypeScript, C#, SQL, розробка та адміністрування корпоративних порталів.</li>
+                <li><strong>Location:</strong> Житомир, Україна.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Interests</h2>
+            <ul>
+                <li><strong>Front-End Development:</strong> Створення сучасних та зручних вебзастосунків.</li>
+                <li><strong>Outdoor & Fishing:</strong> Риболовля на хижака (спінінг) та відпочинок на природі.</li>
+                <li><strong>DIY & Engineering:</strong> Будівельні проєкти та проєктування автономних систем живлення (сонячні панелі, зарядні станції).</li>
+                <li><strong>Gaming:</strong> Action RPG ігри (Diablo 4, Path of Exile 2).</li>
+            </ul>
+        </section>
+    </main>
+
 </body>
 </html>
