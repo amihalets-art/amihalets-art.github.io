@@ -1,0 +1,238 @@
+/* ==========================================================================
+   1. ЗМІННІ ТА БАЗОВІ НАЛАШТУВАННЯ
+   ========================================================================== */
+
+:root {
+    --primary: #2b5876;
+    --secondary: #4e4376;
+    --text-dark: #2d3748;
+    --text-light: #ffffff;
+    --bg-color: #f7fafc;
+    --accent: #ffd700;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg-color);
+    background-image: radial-gradient(#e2e8f0 1.5px, transparent 1.5px);
+    background-size: 24px 24px;
+    color: var(--text-dark);
+    line-height: 1.6;
+}
+
+/* ==========================================================================
+   2. НАВІГАЦІЯ ТА ШАПКА
+   ========================================================================== */
+
+header {
+    background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    color: var(--text-light);
+    text-decoration: none;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.9rem;
+    position: relative;
+    padding-bottom: 5px;
+    transition: color 0.3s ease;
+}
+
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--accent);
+    transition: width 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: var(--accent);
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+/* ==========================================================================
+   3. КОНТЕЙНЕР (Glassmorphism)
+   ========================================================================== */
+
+.container {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.75);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
+}
+
+/* ==========================================================================
+   4. СЕКЦІЇ ТА АНІМАЦІЇ
+   ========================================================================== */
+
+section {
+    margin-bottom: 30px;
+    padding: 30px;
+    background: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
+    border-left: 6px solid var(--primary);
+    transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1), box-shadow 0.3s ease;
+    
+    /* Відступ при скролі, щоб хедер не перекривав заголовок */
+    scroll-margin-top: 100px; 
+}
+
+section:hover {
+    transform: translateY(-2px) translateX(4px);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.08);
+}
+
+h2 {
+    font-size: 1.6rem;
+    margin-top: 0;
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+}
+
+/* ==========================================================================
+   5. ЕЛЕМЕНТИ СТОРІНКИ (Фото, Теги, Списки)
+   ========================================================================== */
+
+.profile-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.profile-wrapper img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #ffffff;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+    transition: transform 0.5s ease;
+}
+
+.profile-wrapper img:hover {
+    transform: scale(1.05) rotate(3deg);
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    color: #718096;
+    margin: 5px 0 0 0;
+    font-weight: 500;
+}
+
+.badge {
+    display: inline-block;
+    background: linear-gradient(135deg, #4a5568 0%, #2d3748 100%);
+    color: var(--text-light);
+    padding: 6px 14px;
+    border-radius: 30px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    margin: 8px 6px 0 0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.job-entry {
+    border-bottom: 1px dashed #e2e8f0;
+    padding-bottom: 20px;
+}
+
+.job-entry:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.job-date {
+    font-size: 0.9rem;
+    color: #a0aec0;
+    font-weight: 600;
+    margin-top: -10px;
+}
+
+.work-list {
+    padding-left: 20px;
+}
+
+.work-list li {
+    margin-bottom: 8px;
+}
+
+/* ==========================================================================
+   6. ПІДВАЛ
+   ========================================================================== */
+
+footer {
+    text-align: center;
+    padding: 30px;
+    background: #1a202c;
+    color: #a0aec0;
+    font-size: 0.9rem;
+    margin-top: 60px;
+}
+
+/* ==========================================================================
+   7. АДАПТИВНІСТЬ (Мобільні пристрої)
+   ========================================================================== */
+
+@media (max-width: 768px) {
+    .profile-wrapper {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+    }
+    
+    .container {
+        margin: 15px;
+        padding: 15px;
+    }
+    
+    section {
+        padding: 20px;
+    }
+}

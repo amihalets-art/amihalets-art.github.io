@@ -1,0 +1,201 @@
+/* --- Скидання базових стилів (Reset) --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif; /* Можна змінити на шрифти з Google Fonts (наприклад, Inter або Roboto) */
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Прибираємо підкреслення у всіх посилань */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* --- Шапка (Header) --- */
+.header {
+    display: flex;
+    justify-content: space-between; /* Розкидає Логотип, Навігацію та Кнопки по краях і центру */
+    align-items: center; /* Вирівнює елементи по вертикалі по центру */
+    padding: 20px 40px;
+    background-color: #ffffff;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.text-black { color: #000; }
+.text-blue { color: #2563eb; } /* Синій колір для "Code" */
+
+.main-nav {
+    display: flex;
+    gap: 30px; /* Відстань між пунктами меню */
+}
+
+.main-nav a {
+    color: #4b5563;
+    font-weight: 500;
+}
+
+.main-nav a:hover {
+    color: #000;
+}
+
+.auth-buttons {
+    display: flex;
+    gap: 15px;
+}
+
+/* Спільні стилі для кнопок шапки */
+.btn-login, .btn-signup {
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 6px; /* Ті самі заокруглення, про які казав викладач */
+    cursor: pointer;
+    border: none;
+}
+
+.btn-login {
+    background-color: transparent;
+    color: #4b5563;
+}
+
+.btn-signup {
+    background-color: #0f172a; /* Темно-синій, майже чорний */
+    color: #ffffff;
+}
+
+.btn-signup:hover {
+    background-color: #1e293b;
+}
+/* --- Головний екран (Hero) --- */
+.hero {
+    background-color: #111827; /* Темно-синій фон */
+    color: #ffffff;
+    text-align: center;
+    padding: 100px 20px; /* Відступи зверху/знизу та по боках */
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 18px;
+    color: #9ca3af; /* Світло-сірий для підзаголовка */
+    max-width: 600px; /* Обмежуємо ширину тексту */
+    margin: 0 auto 40px auto; /* Центруємо абзац */
+}
+
+.hero-actions {
+    display: flex;
+    justify-content: center; /* Центруємо кнопки */
+    gap: 20px;
+}
+
+.btn-light, .btn-dark {
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+    border: none;
+}
+
+.btn-light {
+    background-color: #ffffff;
+    color: #111827;
+}
+
+.btn-dark {
+    background-color: transparent;
+    color: #ffffff;
+    border: 1px solid #4b5563; /* Рамка для темної кнопки */
+}
+
+.btn-dark:hover {
+    background-color: #1f2937;
+}
+
+/* --- Блок з картками (Learning Paths) --- */
+.learning-paths {
+    padding: 80px 40px;
+    text-align: center;
+}
+
+.learning-paths h2 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.learning-paths > p {
+    color: #6b7280;
+    margin-bottom: 50px;
+}
+
+/* Флекс-контейнер для карток */
+.cards-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* Стилі самих карток */
+.card {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 12px; /* Заокруглення кутів */
+    text-align: left;
+    width: 33%; /* Картки займають третину ширини */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08); /* Легка тінь для об'єму */
+    border: 1px solid #e5e7eb;
+    border-top: 4px solid transparent; /* Базова невидима лінія зверху */
+    
+    /* Робимо саму картку флекс-контейнером, щоб притиснути лінк донизу */
+    display: flex;
+    flex-direction: column; 
+}
+
+/* Кольорові смужки зверху карток */
+.card-red { border-top-color: #ef4444; }
+.card-blue { border-top-color: #3b82f6; }
+.card-green { border-top-color: #10b981; }
+
+.card .icon {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.card h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.card p {
+    color: #6b7280;
+    font-size: 15px;
+    line-height: 1.5;
+    margin-bottom: 25px;
+    flex-grow: 1; /* Заповнює вільний простір, штовхаючи лінк вниз */
+}
+
+.explore-link {
+    color: #3b82f6;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.explore-link:hover {
+    text-decoration: underline;
+}
