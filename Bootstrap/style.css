@@ -1,0 +1,36 @@
+/* style.css */
+
+/* Загальний фон сторінки */
+body {
+    background-color: #f4f6f9;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+/* Кастомні заокруглення для карток, щоб вони виглядали сучасніше */
+.custom-card {
+    border-radius: 0.5rem;
+    overflow: hidden; /* Щоб верхня кольорова рамка не виходила за межі заокруглень */
+}
+
+/* Стилізація заголовка картки */
+.card-header {
+    border-bottom: 1px solid rgba(0,0,0,0.08);
+}
+
+/* Налаштування перемикача (Switch) у формі */
+.form-switch .form-check-input {
+    width: 2.8em;
+    height: 1.4em;
+    cursor: pointer;
+}
+
+.form-switch .form-check-label {
+    cursor: pointer;
+    color: #495057;
+}
+
+/* Усунення стандартної обводки інпутів при фокусі, заміна на м'яку тінь */
+.form-control:focus, .form-select:focus {
+    border-color: #86b7fe;
+    box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.15);
+}
