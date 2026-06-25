@@ -1,6 +1,4 @@
-/* ==========================================================================
-   1. ЗМІННІ ТА БАЗОВІ НАЛАШТУВАННЯ
-   ========================================================================== */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 
 :root {
     --primary: #2b5876;
@@ -16,7 +14,7 @@ html {
 }
 
 body {
-    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
     margin: 0;
     padding: 0;
     background-color: var(--bg-color);
@@ -25,10 +23,6 @@ body {
     color: var(--text-dark);
     line-height: 1.6;
 }
-
-/* ==========================================================================
-   2. НАВІГАЦІЯ ТА ШАПКА
-   ========================================================================== */
 
 header {
     background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
@@ -46,10 +40,11 @@ nav ul {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    gap: 10px;
 }
 
 nav ul li {
-    margin: 0 20px;
+    margin: 0 15px;
 }
 
 nav ul li a {
@@ -60,8 +55,9 @@ nav ul li a {
     letter-spacing: 1px;
     font-size: 0.9rem;
     position: relative;
-    padding-bottom: 5px;
+    padding: 5px 0;
     transition: color 0.3s ease;
+    outline: none;
 }
 
 nav ul li a::after {
@@ -75,17 +71,21 @@ nav ul li a::after {
     transition: width 0.3s ease;
 }
 
-nav ul li a:hover {
+nav ul li a:hover,
+nav ul li a:focus-visible {
     color: var(--accent);
 }
 
-nav ul li a:hover::after {
+nav ul li a:hover::after,
+nav ul li a:focus-visible::after {
     width: 100%;
 }
 
-/* ==========================================================================
-   3. КОНТЕЙНЕР (Glassmorphism)
-   ========================================================================== */
+nav ul li a:focus-visible {
+    border-radius: 4px;
+    box-shadow: 0 0 0 2px var(--accent);
+    padding: 5px;
+}
 
 .container {
     max-width: 900px;
@@ -99,10 +99,6 @@ nav ul li a:hover::after {
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
 }
 
-/* ==========================================================================
-   4. СЕКЦІЇ ТА АНІМАЦІЇ
-   ========================================================================== */
-
 section {
     margin-bottom: 30px;
     padding: 30px;
@@ -111,8 +107,6 @@ section {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
     border-left: 6px solid var(--primary);
     transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1), box-shadow 0.3s ease;
-    
-    /* Відступ при скролі, щоб хедер не перекривав заголовок */
     scroll-margin-top: 100px; 
 }
 
@@ -129,10 +123,6 @@ h2 {
     -webkit-text-fill-color: transparent;
     display: inline-block;
 }
-
-/* ==========================================================================
-   5. ЕЛЕМЕНТИ СТОРІНКИ (Фото, Теги, Списки)
-   ========================================================================== */
 
 .profile-wrapper {
     display: flex;
@@ -171,6 +161,13 @@ h2 {
     font-weight: 500;
     margin: 8px 6px 0 0;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    cursor: default;
+}
+
+.badge:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
 
 .job-entry {
@@ -198,10 +195,6 @@ h2 {
     margin-bottom: 8px;
 }
 
-/* ==========================================================================
-   6. ПІДВАЛ
-   ========================================================================== */
-
 footer {
     text-align: center;
     padding: 30px;
@@ -210,10 +203,6 @@ footer {
     font-size: 0.9rem;
     margin-top: 60px;
 }
-
-/* ==========================================================================
-   7. АДАПТИВНІСТЬ (Мобільні пристрої)
-   ========================================================================== */
 
 @media (max-width: 768px) {
     .profile-wrapper {
