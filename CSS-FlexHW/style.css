@@ -1,4 +1,4 @@
-/* --- Скидання базових стилів (Reset) --- */
+
 * {
     margin: 0;
     padding: 0;
@@ -6,22 +6,22 @@
 }
 
 body {
-    font-family: Arial, sans-serif; /* Можна змінити на шрифти з Google Fonts (наприклад, Inter або Roboto) */
+    font-family: Arial, sans-serif;
     color: #333;
     line-height: 1.6;
 }
 
-/* Прибираємо підкреслення у всіх посилань */
+
 a {
     text-decoration: none;
     color: inherit;
 }
 
-/* --- Шапка (Header) --- */
+
 .header {
     display: flex;
-    justify-content: space-between; /* Розкидає Логотип, Навігацію та Кнопки по краях і центру */
-    align-items: center; /* Вирівнює елементи по вертикалі по центру */
+    justify-content: space-between;
+    align-items: center;
     padding: 20px 40px;
     background-color: #ffffff;
 }
@@ -32,11 +32,11 @@ a {
 }
 
 .text-black { color: #000; }
-.text-blue { color: #2563eb; } /* Синій колір для "Code" */
+.text-blue { color: #2563eb; }
 
 .main-nav {
     display: flex;
-    gap: 30px; /* Відстань між пунктами меню */
+    gap: 30px;
 }
 
 .main-nav a {
@@ -53,12 +53,12 @@ a {
     gap: 15px;
 }
 
-/* Спільні стилі для кнопок шапки */
+
 .btn-login, .btn-signup {
     padding: 10px 20px;
     font-size: 16px;
     font-weight: 600;
-    border-radius: 6px; /* Ті самі заокруглення, про які казав викладач */
+    border-radius: 6px;
     cursor: pointer;
     border: none;
 }
@@ -69,19 +69,19 @@ a {
 }
 
 .btn-signup {
-    background-color: #0f172a; /* Темно-синій, майже чорний */
+    background-color: #0f172a;
     color: #ffffff;
 }
 
 .btn-signup:hover {
     background-color: #1e293b;
 }
-/* --- Головний екран (Hero) --- */
+
 .hero {
-    background-color: #111827; /* Темно-синій фон */
+    background-color: #111827;
     color: #ffffff;
     text-align: center;
-    padding: 100px 20px; /* Відступи зверху/знизу та по боках */
+    padding: 100px 20px;
 }
 
 .hero h1 {
@@ -91,14 +91,14 @@ a {
 
 .hero p {
     font-size: 18px;
-    color: #9ca3af; /* Світло-сірий для підзаголовка */
-    max-width: 600px; /* Обмежуємо ширину тексту */
-    margin: 0 auto 40px auto; /* Центруємо абзац */
+    color: #9ca3af;
+    max-width: 600px;
+    margin: 0 auto 40px auto;
 }
 
 .hero-actions {
     display: flex;
-    justify-content: center; /* Центруємо кнопки */
+    justify-content: center;
     gap: 20px;
 }
 
@@ -119,14 +119,14 @@ a {
 .btn-dark {
     background-color: transparent;
     color: #ffffff;
-    border: 1px solid #4b5563; /* Рамка для темної кнопки */
+    border: 1px solid #4b5563;
 }
 
 .btn-dark:hover {
     background-color: #1f2937;
 }
 
-/* --- Блок з картками (Learning Paths) --- */
+
 .learning-paths {
     padding: 80px 40px;
     text-align: center;
@@ -142,7 +142,7 @@ a {
     margin-bottom: 50px;
 }
 
-/* Флекс-контейнер для карток */
+
 .cards-container {
     display: flex;
     justify-content: center;
@@ -151,23 +151,23 @@ a {
     margin: 0 auto;
 }
 
-/* Стилі самих карток */
+
 .card {
     background-color: #ffffff;
     padding: 30px;
-    border-radius: 12px; /* Заокруглення кутів */
+    border-radius: 12px;
     text-align: left;
-    width: 33%; /* Картки займають третину ширини */
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08); /* Легка тінь для об'єму */
+    width: 33%;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
     border: 1px solid #e5e7eb;
-    border-top: 4px solid transparent; /* Базова невидима лінія зверху */
+    border-top: 4px solid transparent;
     
-    /* Робимо саму картку флекс-контейнером, щоб притиснути лінк донизу */
+   
     display: flex;
     flex-direction: column; 
 }
 
-/* Кольорові смужки зверху карток */
+
 .card-red { border-top-color: #ef4444; }
 .card-blue { border-top-color: #3b82f6; }
 .card-green { border-top-color: #10b981; }
@@ -187,7 +187,7 @@ a {
     font-size: 15px;
     line-height: 1.5;
     margin-bottom: 25px;
-    flex-grow: 1; /* Заповнює вільний простір, штовхаючи лінк вниз */
+    flex-grow: 1;
 }
 
 .explore-link {
