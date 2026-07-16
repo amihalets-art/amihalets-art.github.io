@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="uk" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>НБУ | Курс та Конвертер</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <header>
+            <div class="logo">
+                <h1>💸 НБУ Exchange</h1>
+                <p>Офіційний курс та конвертер</p>
+            </div>
+            <button id="theme-toggle" aria-label="Перемкнути тему">🌙</button>
+        </header>
+
+        <main>
+            <section class="controls">
+                <div class="control-group">
+                    <label for="date-input">Дата курсу:</label>
+                    <input type="date" id="date-input">
+                </div>
+                <div class="control-group">
+                    <label for="uah-input">Конвертувати (UAH):</label>
+                    <input type="number" id="uah-input" placeholder="Введіть суму в ₴" min="0">
+                </div>
+            </section>
+
+            <section class="results">
+                <div id="currency-grid" class="currency-grid">
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
