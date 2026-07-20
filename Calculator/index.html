@@ -1,40 +1,49 @@
 <!DOCTYPE html>
-<html lang="uk" data-theme="light">
+<html lang="uk">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>НБУ | Курс та Конвертер</title>
+    <title>NBU Rate</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="app-container">
+    <div class="container">
         <header>
-            <div class="logo">
-                <h1>💸 НБУ Exchange</h1>
-                <p>Офіційний курс та конвертер</p>
+            <div class="brand">
+                <span class="logo">₴</span>
+                <div class="brand-text">
+                    <span class="title">NBU Rate</span>
+                    <span class="subtitle">Official data · bank.gov.ua</span>
+                </div>
             </div>
-            <button id="theme-toggle" aria-label="Перемкнути тему">🌙</button>
         </header>
 
         <main>
-            <section class="controls">
-                <div class="control-group">
-                    <label for="date-input">Дата курсу:</label>
-                    <input type="date" id="date-input">
-                </div>
-                <div class="control-group">
-                    <label for="uah-input">Конвертувати (UAH):</label>
-                    <input type="number" id="uah-input" placeholder="Введіть суму в ₴" min="0">
+            <section class="panel">
+                <div class="panel-header">01 / Query</div>
+                <div class="panel-content">
+                    <div class="form-group">
+                        <label for="currency-select">Currency</label>
+                        <select id="currency-select">
+                            <option value="USD">USD - US Dollar</option>
+                            <option value="EUR">EUR - Euro</option>
+                            <option value="PLN">PLN - Polish Zloty</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="date-input">Target Date</label>
+                        <input type="date" id="date-input">
+                    </div>
                 </div>
             </section>
 
-            <section class="results">
-                <div id="currency-grid" class="currency-grid">
+            <section class="panel">
+                <div class="panel-header">02 / Latest</div>
+                <div class="panel-content" id="latest-rate-container">
                 </div>
             </section>
         </main>
     </div>
-
     <script src="app.js"></script>
 </body>
 </html>
